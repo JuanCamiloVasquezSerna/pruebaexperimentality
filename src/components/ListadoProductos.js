@@ -57,8 +57,20 @@ class ListadoProductos extends React.Component {
     }
 
     componentDidMount(){
+        this.resize();
+
+        window.addEventListener('resize', this.resize);
+    }
+
+    resize = () => {
         let innerWidth = window.innerWidth;
         
+        if(innerWidth >= 1200){
+            this.setState({
+                slidesPerView: 4
+            });
+        }
+
         if(innerWidth >= 992 && innerWidth < 1200){
             this.setState({
                 slidesPerView: 3

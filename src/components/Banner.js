@@ -63,11 +63,21 @@ class Banner extends React.Component {
     }
 
     componentDidMount(){
+        this.resize();
+
+        window.addEventListener('resize', this.resize);
+    }
+
+    resize = () => {
         let innerWidth = window.innerWidth;
         
         if(innerWidth < 768){
             this.setState({
                 imagen: BannerImgMobile
+            });
+        }else{
+            this.setState({
+                imagen: BannerImg
             });
         }
     }

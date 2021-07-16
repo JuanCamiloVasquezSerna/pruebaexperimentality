@@ -45,7 +45,7 @@ Prueba Experimentality
 
 9. Si la respuesta del buscador SI tiene productos, se procede a listarlos en una paginación de 20 productos por página.
 
-10. Para salir de la lista de la respuesta de búsqueda basta con borrar el valor del input de búsqueda.
+10. Para salir de la vista de la respuesta de búsqueda basta con borrar el valor del input de búsqueda.
 
 11. El sistema es responsive.
 	- En la vista de movil, en la sección de footer, al darle click a los títulos POLÍTICAS y SOBRE NOSOTROS se despliega el contenido correspondiente.
