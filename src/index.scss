@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Helvetica43LightExtended';
+    src: url("./fonts/Helvetica43LightExtended.eot");
+    src: url("./fonts/Helvetica43LightExtended.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/Helvetica43LightExtended.otf") format('otf'),
+        url("./fonts/Helvetica43LightExtended.svg#Helvetica43LightExtended") format('svg'),
+        url("./fonts/Helvetica43LightExtended.ttf") format('truetype'),
+        url("./fonts/Helvetica43LightExtended.woff") format('woff'),
+        url("./fonts/Helvetica43LightExtended.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url("./fonts/HelveticaNeueMedium.eot");
+    src: url("./fonts/HelveticaNeueMedium.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/HelveticaNeueMedium.otf") format('otf'),
+        url("./fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium") format('svg'),
+        url("./fonts/HelveticaNeueMedium.ttf") format('truetype'),
+        url("./fonts/HelveticaNeueMedium.woff") format('woff'),
+        url("./fonts/HelveticaNeueMedium.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url("./fonts/HelveticaNeueBold.eot");
+    src: url("./fonts/HelveticaNeueBold.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/HelveticaNeueBold.ttf") format('truetype'),
+        url("./fonts/HelveticaNeueBold.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'RobotoBlackItalic';
+    src: url("./fonts/RobotoBlackItalic.eot");
+    src: url("./fonts/RobotoBlackItalic.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/RobotoBlackItalic.otf") format('otf'),
+        url("./fonts/RobotoBlackItalic.ttf") format('truetype'),
+        url("./fonts/RobotoBlackItalic.woff") format('woff'),
+        url("./fonts/RobotoBlackItalic.svg#RobotoBlackItalic") format('svg'),
+        url("./fonts/RobotoBlackItalic.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url("./fonts/RobotoRegular.eot");
+    src: url("./fonts/RobotoRegular.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/RobotoRegular.otf") format('otf'),
+        url("./fonts/RobotoRegular.svg#RobotoRegular") format('svg'),
+        url("./fonts/RobotoRegular.woff2") format('woff2'),
+        url("./fonts/RobotoRegular.woff") format('woff'),
+        url("./fonts/RobotoRegular.ttf") format('truetype');
+}
+
+$font_light: 'Helvetica43LightExtended';
+$font_medium: 'HelveticaNeueMedium';
+$font_bold: 'HelveticaNeueBold';
+$font_italic: 'RobotoBlackItalic';
+$font_regular: 'RobotoRegular';
+
+$padding_button: 7px 15px;
+$title_size: 22px;
+$color_morado: #5B17AA;
+
+// Responsive
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin estilos_boton{
+    background: black;
+    border-radius: 0;
+    border: 0;
+    padding: $padding_button;
+    color: white;
+    cursor: pointer;
+    font-family: $font_medium;
+}
+
+@mixin media($media) {
+    @if $media == xs {
+        @media (max-width: ($breakpoint-sm - 1)) { @content; }
+    }
+    @else if $media == sm {
+        @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-md - 1)) { @content; }
+    }
+    @else if $media == md {
+        @media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) { @content; }
+    }
+    @else if $media == lg {
+        @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1)) { @content; }
+    }
+    @else if $media == xl {
+        @media (min-width: $breakpoint-xl) { @content; }
+    }
+}

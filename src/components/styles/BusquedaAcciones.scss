@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.busqueda__acciones{
+	text-align: right;
+
+	button{
+		@include estilos_boton;
+		
+	    margin-right: 15px;
+
+	    &:last-child{
+	    	margin-right: 0px;
+	    }
+	}
+}

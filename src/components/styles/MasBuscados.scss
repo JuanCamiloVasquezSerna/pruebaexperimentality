@@ -1,0 +1,31 @@
+@import "../../index.scss";
+
+#masbuscados{
+	padding: 50px 0px 80px 0;
+
+	#masbuscados__contenedor{
+		h1{
+			text-align: center;
+			margin: 0 0 50px 0;
+		}
+	}
+}
+
+@mixin estilosMovil {
+	#masbuscados{
+		#masbuscados__contenedor{
+			h1{
+				font-family: $font_medium;
+	    		font-weight: 100;
+			}
+		}
+	}
+}
+
+@include media(sm) {
+	@include estilosMovil;
+}
+
+@include media(xs) {
+	@include estilosMovil;
+}

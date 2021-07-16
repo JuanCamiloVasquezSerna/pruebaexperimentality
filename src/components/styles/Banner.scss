@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+#banner{
+    position: relative;
+
+    .banner__list{
+        .swiper-wrapper{
+            .swiper-slide{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .swiper__navegacion{
+        background: rgba(96, 96, 96, 0.15);
+
+        &#prev{
+            left: 20px;
+        }
+
+        &#next{
+            right: 20px;
+        }
+    }
+}

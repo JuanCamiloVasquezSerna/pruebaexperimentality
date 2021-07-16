@@ -1,0 +1,94 @@
+@import "../../index.scss";
+
+#busqueda{
+	padding: 50px 0px 80px 0;
+
+	#busqueda__contenedor{
+		flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: flex-start;
+    	margin-top: 30px;
+    	margin-bottom: 30px;
+
+    	.producto{
+    		width: calc(100% / 4 - 25px);
+    		margin-right: 30px;
+    		margin-top: 30px;
+    	}
+	}
+}
+
+@include media(xl) {
+	#busqueda{
+		#busqueda__contenedor{
+	    	.producto{
+	    		&:nth-child(4n+4){
+	    			margin-right: 0;
+	    		}
+
+	    		&:nth-child(-n+4){
+	    			margin-top: 0;
+	    		}
+	    	}
+		}
+	}
+}
+
+@include media(lg) {
+	#busqueda{
+		#busqueda__contenedor{
+			.producto{
+				width: calc(100% / 3 - 22px);
+
+				&:nth-child(3n+3){
+	    			margin-right: 0;
+	    		}
+
+	    		&:nth-child(-n+3){
+	    			margin-top: 0;
+	    		}
+			}
+		}
+	}
+}
+
+@include media(md) {
+	#busqueda{
+		#busqueda__contenedor{
+			.producto{
+				width: calc(100% / 2 - 17px);
+
+				&:nth-child(2n+2){
+	    			margin-right: 0;
+	    		}
+
+	    		&:nth-child(-n+2){
+	    			margin-top: 0;
+	    		}
+			}
+		}
+	}
+}
+
+@mixin estilosMovil {
+	#busqueda{
+		#busqueda__contenedor{
+			.producto{
+				width: 100%;
+				margin-right: 0;
+
+	    		&:first-child{
+	    			margin-top: 0;
+	    		}
+			}
+		}
+	}
+}
+
+@include media(sm) {
+	@include estilosMovil;
+}
+
+@include media(xs) {
+	@include estilosMovil;
+}

@@ -1,0 +1,46 @@
+@import "../../index.scss";
+
+#navbar{
+	background: black;
+
+	#navbar__contenedor{
+		width: 100%;
+	    margin: 0 auto;
+	    max-width: 750px;
+		
+		nav{
+			ul{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 10px 0px;
+
+				li{
+					padding: 5px 0px;
+					width: 17%;
+				    text-align: center;
+				    border-right: 1px solid white;
+				    color: white;
+
+				    &:last-child{
+				    	border-right: none;
+				    }
+				}
+			}
+		}
+	}
+}
+
+@mixin estilosMovil {
+	#navbar{
+		display: none;
+	}
+}
+
+@include media(sm) {
+	@include estilosMovil;
+}
+
+@include media(xs) {
+	@include estilosMovil;
+}
