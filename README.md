@@ -1,9 +1,9 @@
 # Prueba Experimentality
 Prueba Experimentality
 
-### Por: Juan Camilo Vasquez Serna
-### Fecha creación: 2021/07/13
-### Fecha actualización: 2021/07/16
+#### Por: Juan Camilo Vasquez Serna
+#### Fecha creación: 2021/07/13
+#### Fecha actualización: 2021/07/16
 
 ### Apreciaciones iniciales
 
